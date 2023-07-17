@@ -1,0 +1,35 @@
+---
+AWSTemplateFormatVersion: 2010-09-09
+Description: Template to Create CodeCommit Repo with Initial Commit
+
+# Values to have as default or overrides
+Parameters:
+  CodeBucket:
+    Type: String
+    Description: Bucket in which you have code
+    Default: rbox-template-bucket
+  CodeKey:
+    Type: String
+    Description: Code
+    Default: archive.zip
+
+# Resources are everything we create with our Cloudformation Template
+Resources:
+  productrepo:
+    Type: AWS::CodeCommit::Repository
+    Properties:
+      RepositoryName: citizen_repo
+      Code:
+        BranchName: master
+        S3:
+          Bucket:
+            Ref: CodeBucket
+          Key:
+            Ref: CodeKey
+
+# Outputs can be referred to by other stacks or displayed in AWS Console
+Outputs:
+  RepositoryID:
+    Description: ID of the created CodeCommit repo
+    Value:
+      Ref: productrepo
