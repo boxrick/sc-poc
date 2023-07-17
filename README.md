@@ -1,1 +1,1 @@
-[Click me to deploy](https://eu-central-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/create/review?templateURL=https://raw.githubusercontent.com/boxrick/sc-poc/main/cloudformation.yml&stackName=my_new_citizen_product)
+[Click me to deploy](https://eu-west-1.console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/create/review?templateURL=https://raw.githubusercontent.com/boxrick/sc-poc/main/cloudformation.yml&stackName=my_new_citizen_product)
